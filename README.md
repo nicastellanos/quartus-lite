@@ -1,4 +1,48 @@
-# ECED 4250 Install instructions
+# ECED 4260 Install instructions
 
-Ensure you have the latest version of [XQuartz](https://www.xquartz.org) and [Docker Desktop](https://www.docker.com/get-started) installed.
+Before getting started Ensure you have the latest version of [XQuartz](https://www.xquartz.org) and [Docker Desktop](https://www.docker.com/get-started) installed.
+
+## XQuartz
+
+Open XQuartz and go into the XQuartz>Preferences found in the top lefthand corner of the screen. Once in preferences go to Security and click **Allow Connections from Network Clients**
+
+Restart the application to set the preferences.
+
+
+## Docker Setup and Build
+
+Copy this repository through download or git clone
+
+Within your terminal go to directory where this repo is stored. Open docker and confirm its functionality by running
+
+`docker --help`
+
+If docker is running correctly you will get the help text prompt on the terminal. Once confirming docker is running you will begin by running
+
+`docker build -t 'eced4260' .`
+
+You should expect to see the docker build operation begin, it will build the OS and download the necessary software for Quartus Prime Lite. This will take some time since the install is quite large.
+
+Once the build has successfully completed we can begin running the setup script to run the docker container
+
+While in the repositorys directory you want to allow the quartus.sh script permission to run. This can be done by
+
+`chmod +x quartus.sh`
+
+## Running the container
+
+Now we are ready to run the container
+
+Open up XQuartz again and open the terminal under Applications>Terminal you should be greeted with a terminal
+
+`bash-3.2$              `
+
+Once again move into the working directory of this download where the quartus.sh file is stored. Once again confirm docker is running then in the terminal enter
+
+`./quartus /bin/bash`
+
+The docker contrainer should execute and you should see your user change to root as you are now "inside" the container.
+
+Finally run `quartus` to run the Quartus Prime Lite Program you should see the program begin running
+
 
