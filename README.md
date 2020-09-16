@@ -2,7 +2,8 @@
 
 Before getting started Ensure you have the latest version of [XQuartz](https://www.xquartz.org) and [Docker Desktop](https://www.docker.com/get-started) installed.
 
-Note this docker container will work for simulation enviroments. It is much lighter than a necessary VM (~20GB vs 50GB) but will not support USB passthrough. If working with hardware, you will need a VM (and a lot more memory) information for setting up quartus using a VM can be found [here](https://siytek.com/quartus-mac-virtualbox-ubuntu/)
+Note this docker container will work for simulation enviroments. It is much lighter than a VM (~20GB vs 50GB) but will not support USB passthrough. If working with hardware, you will need a VM (and a lot more memory) information for setting up quartus using a VM can be found [here](https://siytek.com/quartus-mac-virtualbox-ubuntu/)
+
 
 ## XQuartz
 
@@ -18,13 +19,17 @@ Restart the application to set the preferences.
 
 Copy this repository through download or git clone
 
-Within your terminal go to directory where this repo is stored. Open docker and confirm its functionality by running
+Within your terminal go to directory where this repo is stored.
+
+'cd ~/path/to/repo/quartus-lite/'
+
+ Open docker and confirm its functionality by running
 
 `docker --help`
 
 If docker is running correctly you will get the help text prompt on the terminal. Once confirming docker is running you will begin by running
 
-`docker build -t 'eced4260' .`
+`docker build -t 'eced4260:latest' .`
 
 You should expect to see the docker build operation begin, it will build the OS and download the necessary software for Quartus Prime Lite. This will take some time since the install is quite large.
 
