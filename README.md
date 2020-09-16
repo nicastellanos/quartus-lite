@@ -11,7 +11,6 @@ Open XQuartz and go into the XQuartz>Preferences found in the top lefthand corne
 Restart the application to set the preferences.
 
 **Note:** I found I had to resart my computer so the XQuartz settings took in effect
-{: .note}
 
 
 
@@ -48,7 +47,6 @@ The docker contrainer should execute and you should see your user change to root
 Finally run `quartus` to run the Quartus Prime Lite Program you should see the program begin running
 
 **Note:** If the quartus command is not working you can find the executable in /opt/intelFPGA_lite/20.1/quartus/bin and run './quartus' in the terminal
-{: .note}
 
 
 
